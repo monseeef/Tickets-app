@@ -1,0 +1,63 @@
+/* In src/components/TicketForm.css */
+.ticket-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.ticket-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.ticket-form input,
+.ticket-form textarea,
+.ticket-form select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.ticket-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-error-inline {
+  background: #fde2e2;
+  color: #9b1c1c;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-submit {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #6e8efb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

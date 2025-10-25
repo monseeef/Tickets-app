@@ -1,0 +1,116 @@
+/* In src/pages/LandingPage.css */
+
+.landing-page {
+  width: 100%;
+}
+
+/* 1. Hero Section */
+.hero-section {
+  position: relative; /* Needed for absolute positioning of wave and circles */
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #6e8efb, #a777e3); /* A nice blue/purple gradient */
+  color: white;
+  text-align: center;
+  overflow: hidden; /* Hide parts of circles that go off-screen */
+}
+
+/* THE WAVY BOTTOM using CSS clip-path (easier than SVG) */
+.hero-wave {
+  position: absolute;
+  bottom: -1px; /* Cover the hard edge */
+  left: 0;
+  width: 100%;
+  height: 100px; /* How tall the wave is */
+  background-color: #f4f7f6; /* Same as our body background! */
+  clip-path: polygon(0% 100%, 100% 100%, 100% 25%, 75% 50%, 50% 25%, 25% 50%, 0% 25%);
+}
+/* You can use an online "css clip path generator" to make a different wave! */
+
+.hero-content {
+  position: relative; /* Make sure content is above the wave */
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-buttons button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #6e8efb;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* 2. Features Section */
+.features-section {
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns on desktop */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* THE BOXES */
+.feature-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* The shadow */
+  text-align: left;
+}
+
+/* THE DECORATIVE CIRCLES */
+.deco-circle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.circle-1 {
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.15); /* A bit more visible */
+}
+
+.circle-2 {
+  bottom: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: #e0e7ff; /* A light blue circle */
+}
+
+/* 3. Responsiveness (Mobile) */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
